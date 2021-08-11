@@ -1,0 +1,77 @@
+html, body {
+    display: flex;
+    flex: 1;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#app {
+    flex: 1;
+}
+
+::-webkit-scrollbar-thumb {
+    border-width: 10px 10px 10px 10px;
+    border-color: rgba(26, 18, 74, 0.51);
+    background-color: rgba(26, 18, 74, 0.27);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border-width: 1px 1px 1px 2px;
+    border-color: #f26c25;
+    background-color: #0099fc;
+}
+
+::-webkit-scrollbar-thumb:active {
+    border-width: 1px 1px 1px 2px;
+    border-color: #f26c25;
+    background-color: #f26c25;
+}
+
+::-webkit-scrollbar-track {
+    border-width: 0;
+}
+
+::-webkit-scrollbar-track:hover {
+    /*border-left: solid 1px #eaeaea;*/
+    background-color: rgba(66, 58, 200, 0.06);
+}
+
+
+.disableCaret {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0px 1000px #091C2B inset;
+    -webkit-background: #091C2B;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+.MuiPickersCalendarHeader-dayLabel {
+    color: white !important;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
