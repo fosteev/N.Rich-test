@@ -19,7 +19,7 @@ class UsersController extends BaseController {
                 return;
             }
 
-            const user  = await this.usersService.getUserByLoginPassword(login.toLowerCase(), password)
+            const user = await this.usersService.getUserByLoginPassword(login.toLowerCase(), password)
 
             if (!user) {
                 res.status(400);
@@ -31,7 +31,6 @@ class UsersController extends BaseController {
             res.status(500);
             res.send(e.message);
         }
-
     }
 }
 

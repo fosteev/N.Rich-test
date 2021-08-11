@@ -10,6 +10,6 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.post('/login', controller.authUser);
+router.post('/login', (req, res) => controller.authUser(req, res));
 
 module.exports = router;
