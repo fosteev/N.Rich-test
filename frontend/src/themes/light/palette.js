@@ -12,7 +12,7 @@ export default {
     primary: {
         contrastText: white,
         dark: blue[900],
-        main: blue[600],
+        main: blue[700],
         light: blue[400]
     },
     secondary: {
@@ -58,5 +58,6 @@ export default {
     },
     background: {
 
-    }
+    },
+    borderRadius: 5
 };
