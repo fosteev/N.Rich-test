@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { List, ListItem, Typography } from "@material-ui/core";
 import { useHistory } from "react-router";
+import { useLocation } from "react-router-dom";
 import { makeStyles } from "@material-ui/styles";
 import clsx from "clsx";
 import useReactPath from "../../../../hooks/useReactPath";
+import { useTranslation } from "react-i18next";
 
 const routes = [{
     text: 'home',
@@ -30,13 +32,9 @@ const useStyles = makeStyles(theme => ({
 
 export default function Menu() {
     const styles = useStyles();
-    const [pathname, setPathName] = useState('');
-    const { push, location } = useHistory();
-    const path = useReactPath();
-
-    useEffect(() => {
-        setPathName(path);
-    }, [path])
+    const { push } = useHistory();
+    const { pathname } = useLocation();
+    const { t } = useTranslation();
 
     const handlePushRoute = route => push(route);
 
@@ -53,7 +51,7 @@ export default function Menu() {
                                 styles.listItemText,
                                 pathname === r.route ? styles.listItemSelected : ''
                             ) }>
-                            { r.text }
+                            { t(r.text) }
                         </Typography>
                     </ListItem>
                 ))

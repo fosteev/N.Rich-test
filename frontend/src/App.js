@@ -4,13 +4,17 @@ import {ThemeProvider} from '@material-ui/styles';
 import light from './themes/light';
 
 import Screens from "./screens";
+import { Provider } from "react-redux";
+import { store } from "./utils/store";
 
 class App extends Component {
     render() {
         return (
-            <ThemeProvider theme={light}>
+            <Provider store={store}>
+                <ThemeProvider theme={light}>
                     <Screens />
-            </ThemeProvider>
+                </ThemeProvider>
+            </Provider>
         );
     }
 
