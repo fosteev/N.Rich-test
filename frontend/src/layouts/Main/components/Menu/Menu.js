@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { List, ListItem, Typography } from "@material-ui/core";
 import { useHistory } from "react-router";
 import { useLocation } from "react-router-dom";
 import { makeStyles } from "@material-ui/styles";
 import clsx from "clsx";
-import useReactPath from "../../../../hooks/useReactPath";
 import { useTranslation } from "react-i18next";
 
 const routes = [{

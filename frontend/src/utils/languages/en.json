@@ -1,4 +1,10 @@
 {
   "home": "home",
-  "news": "news"
+  "news": "news",
+  "required_password": "password is required",
+  "required_login": "login is required",
+  "login": "login",
+  "password": "password",
+  "sign_in": "sign in",
+  "exit": "exit"
 }
