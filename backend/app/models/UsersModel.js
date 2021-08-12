@@ -1,7 +1,7 @@
 const BaseModel = require('./BaseModel');
 
 const users = [{
-    name: 'Test',
+    name: 'test',
     password: '123456789'
 }, {
     name: 'user',

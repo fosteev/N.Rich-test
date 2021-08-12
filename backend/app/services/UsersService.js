@@ -9,7 +9,7 @@ class UsersService extends BaseService {
     }
 
     async getUserByLoginPassword(username, password) {
-        const user = this.usersModel.findByName();
+        const user = this.usersModel.findByName(username);
 
         if (!user) {
             return null;
